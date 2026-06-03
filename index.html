@@ -5,6 +5,7 @@
         <title>ALMIGHTY GENESIS COMPANY</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     </head>
     <body>
 
@@ -103,10 +104,6 @@
 
                                 <li onclick="openPage('ecommerce')">
                                     E-Commerce Websites
-                                </li>
-
-                                <li onclick="openPage('web')">
-                                    Web Hosting
                                 </li>
 
                             </ul>
@@ -924,6 +921,32 @@
                 </div>
             </div>
 
+            <!--OUR PRESENCE-->
+            <div class="company-map-section">
+
+                <h2>OUR PRESENCE</h2>
+                <P>Expanding opportunities across India</P>
+
+                <div id="companyMap"></div>
+
+                <!--HYDERABAD-->
+                <div class="location hyderabad">
+                    <span class="pulse"></span>
+                    <div class="tooltip">
+                        Hyderabad Office
+                    </div>
+                </div>
+
+                <!--ANDHRA PRADESH-->
+                <div class="location ap">
+                    <span class="pulse"></span>
+                    <div class="tooltip">
+                        Andhra Pradesh Office
+                    </div>
+                </div>
+        
+            </div>
+
         </section>
 
 
@@ -983,7 +1006,7 @@
 
         <script src="script.js"></script>
 
-
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   
     </body> 
