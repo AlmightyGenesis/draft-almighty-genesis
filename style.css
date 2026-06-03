@@ -7,7 +7,7 @@ body {
 /* NAVBAR */
 nav {
     width: 100%;
-    height: 90px;
+    height: 100px;
 
     
     display: flex;
@@ -33,16 +33,18 @@ nav {
 /* COMPANY */
 .company {
    margin: 0;
-   font-size: 17px;
+   font-size: 15px;
    letter-spacing: 2px;
-   margin-bottom: 25px;
+   margin-bottom: 19px;
    font-family: stencil;   
 }
 
 /* LOGO */
 .logo-img {
-    width: 100px;
-    height: 70px;
+    width: auto;
+    height: 55px;
+    display: block;
+    object-fit: contain;
     margin-bottom: 5px;
     font-family: stencil;
 }
@@ -639,6 +641,10 @@ button:hover {
 
 /* APPOINTMENT PAGE */
 .appointment-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4000;
     width: 100%;
     min-height: 100vh;
     display: none;
@@ -872,13 +878,16 @@ button:hover {
     left: 0;
 
     width:100%;
-   height: 100vh;
+    height: 100vh;
+    
+background: white;
 
    overflow-y: auto;
    overflow-x: hidden;
 
 
     z-index: 5000;
+    flex-direction: column;
 
     scroll-behavior: smooth;
 }
@@ -910,7 +919,7 @@ button:hover {
 
 /* VIDEO */
 .content-video {
-    position: fixed;
+   position: fixed;
 
     top: 0;
     left: 0;
@@ -978,11 +987,11 @@ button:hover {
 }
 
 /* TITLE */
-.content-details h2 {
+.content-details h2 { 
     font-size: 29px;
     margin-bottom: 35px;
-    color: black;
-    font-family: bold;
+    color: goldenrod;
+    font-family: bentham;
     letter-spacing: 3px;
 }
 
@@ -992,7 +1001,7 @@ button:hover {
     margin: auto;
     font-size: 23px;
     line-height: 2;
-    color: black;
+    color: white;
     white-space: pre-line;
     font-family: bold;
 }
@@ -1001,19 +1010,8 @@ button:hover {
     flex: 1;
 } 
 
-.content-page > *{
-    position: relative;
-    z-index: 10;
-}
 
-.content-hero .overlay {
-    position: absolute;
-    inset: 0;
 
-    background: rgba(0, 0, 0, 0.55);
-
-    z-index: 1;
-}
 /* OUR PROCESS SECTION */
 
 .process-section {
@@ -1532,24 +1530,14 @@ button:hover {
 }
 
 
-/* TITLE */
-.content-details h2 { 
-    font-size: 29px;
-    margin-bottom: 35px;
-    color: goldenrod;
-    font-family: bentham;
-    letter-spacing: 3px;
-}
-/* CONTENT TEXT */
-.content-text {
-    flex: 1;
-}   
+
 /* HOME VIDEO */
 .home-video {
     flex: 1;
     width: 90%;
     height: 90%;
 }    
+
 
 /* CONTACT PAGE FULL SCREEN */
 .contact-page{
@@ -1735,7 +1723,6 @@ button:hover {
     inset 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-.content-details,
 #contactSection,
 .get-in-touch-section {
     flex-shrink: 0;
@@ -1789,6 +1776,7 @@ button:hover {
 
     opacity: 0.9;
 }
+
 
 
 /* SMOOTH SCROLL */

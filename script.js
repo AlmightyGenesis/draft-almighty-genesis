@@ -1,91 +1,82 @@
  function hideAll() {
 
-    function hideAll() {
-
     document.getElementById("home").classList.remove("active");
 
     document.getElementById("contentPage").classList.remove("active");
 
 }
-}
+
 
 /* SHOW SECTION */
 function showSection(id) {
 
+    /* HOME HIDE*/
+    document.getElementById("home").classList.remove("active");
+
+    /* CONTENT PAGE HIDE */
+    document.getElementById("contentPage").classList.remove("active");
+
+    /* APPOINTMENT PAGE HIDE */
+    document.getElementById("appointmentPage").classList.remove("active");
+
     document.getElementById("contactPage").classList.remove("active");
 
-   /* SHOW HOME PAGE CONTAINER */
-   document.getElementById("mainHomePage").style.display = "block";
+    document.getElementById("mainHomePage").style.display = "block";
 
-   /* HOME PAGE CONTENT */
-   document.getElementById("contentPage").classList.remove("active");
+    /* SHOW SELECTED PAGE */
+    document.getElementById(id).classList.add("active");
 
-   document.getElementById("contentPage").style.display = "none";
-
-    /* HIDE APPOINTMENT PAGE */
-   document.getElementById("appointmentPage").classList.remove("active");
-
-   document.getElementById("navbar").style.display = "flex";
-
-
-    window.scrollTo(0,0);
+    /* NAVBAR SHOW */
+    document.getElementById("navbar").style.display = "flex";
 
 }
 
 /* OPEN PAGE */
 function openPage (type) {
 
-    /* NAVBAR SHOW */
-    document.getElementById("navbar").style.display = "flex";
-   
-    /* CLOSE APPOINTMENT PAGE IF OPEN */
+    document.getElementById("contactPage").classList.remove("active");
+
     document.getElementById("appointmentPage").classList.remove("active");
 
-    /* SHOW CONTENT PAGE AGAIN */
-    document.getElementById("contentPage").style.display = "block";
-
-    /* HIDE HOME PAGE */
     document.getElementById("mainHomePage").style.display = "none";
-
+    
     /* HOME PAGE HIDE */
     document.getElementById("home").classList.remove("active");
 
     /* CONTENT PAGE SHOW */
     document.getElementById("contentPage").classList.add("active");
 
-    document.getElementById("contactPage").classList.remove("active");
-
 
     /* HIDE EXTRA SECTIONS */
 
-    document.getElementById("overviewProcess").style.display = "none";
-    document.getElementById("overviewWhat").style.display = "none";
-    document.getElementById("missionBoxes").style.display = "none";
-    document.getElementById("missionFlow").style.display = "none";
-    document.getElementById("visionSection").style.display = "none";
-    document.querySelector(".vision-flow-section").style.display = "none";
-    document.getElementById("whyChooseSection").style.display = "none";
+document.getElementById("overviewProcess").style.display = "none";
+document.getElementById("overviewWhat").style.display = "none";
+document.getElementById("missionBoxes").style.display = "none";
+document.getElementById("missionFlow").style.display = "none";
+document.getElementById("visionSection").style.display = "none";
+document.querySelector(".vision-flow-section").style.display = "none";
+document.getElementById("whyChooseSection").style.display = "none";
 
-    /* WHY CHOOSE US PAGE */
-    if(type === "whychoose") {
+/* WHY CHOOSE US PAGE */
+if(type === "whychoose") {
 
-         document.getElementById("videoSource").src = "whychoose.mp4";
-        document.getElementById("contentVideo").load();
+    document.getElementById("videoSource").src = "whychoose.mp4";
+    document.getElementById("contentVideo").load();
 
-        document.getElementById("pageTitle").innerText = "WHY CHOOSE US";
+    document.getElementById("pageTitle").innerText = "WHY CHOOSE US";
     
-        document.getElementById("pageQuestion").innerText =
-       "Why businesses and professionals trust Almighty Genesis?";
+    document.getElementById("pageQuestion").innerText =
+    "Why businesses and professionals trust Almighty Genesis?";
 
-        document.getElementById("detailTitle").innerText =
-       "Building Trust Through Innovation";
+    document.getElementById("detailTitle").innerText =
+    "Building Trust Through Innovation";
 
-        document.getElementById("detailText").innerText =
-       "We provide smart business strategies, technology solutions, and professional guidance to help businesses grow successfully.";
+    document.getElementById("detailText").innerText =
+    "We provide smart business strategies, technology solutions, and professional guidance to help businesses grow successfully.";
 
-       /* SHOW WHY CHOOSE SECTION */
-      document.getElementById("whyChooseSection").style.display = "flex";
-    }
+    /* SHOW WHY CHOOSE SECTION */
+    document.getElementById("whyChooseSection").style.display = "flex";
+}
 
 
 
@@ -316,9 +307,9 @@ function openPage (type) {
 
     bgVideo = "internship.mp4";
 
-    break; 
-   
-    }          
+    break;  
+
+ }          
 
     document.getElementById("pageTitle").innerText = title;
     document.getElementById("pageQuestion").innerText = question;
@@ -331,66 +322,65 @@ function openPage (type) {
     
     /* SHOW ONLY FOR OVERVIEW PAGE */
 
-    if(type === "overview") {
+if(type === "overview") {
 
-       document.getElementById("overviewProcess").style.display = "block";
+    document.getElementById("overviewProcess").style.display = "block";
 
-    }else {
+} else {
 
-        document.getElementById("overviewProcess").style.display = "none";
-    }
+    document.getElementById("overviewProcess").style.display = "none";
+}
 
-    if(type === "overview") {
+if(type === "overview") {
 
-        document.getElementById("overviewWhat").style.display = "block";
+    document.getElementById("overviewWhat").style.display = "block";
 
-    } else {
+} else {
 
-        document.getElementById("overviewWhat").style.display = "none";
-    }
+    document.getElementById("overviewWhat").style.display = "none";
+}
 
-    /* SHOW ONLY FOR MISSION PAGE */
+/* SHOW ONLY FOR MISSION PAGE */
 
-    if(type === "misssion") {
+if(type === "misssion") {
 
-        document.getElementById("missionBoxes").style.display = "block";
+    document.getElementById("missionBoxes").style.display = "block";
 
-    } else {
+} else {
 
-       document.getElementById("missionBoxes").style.display = "none";
-    }
+    document.getElementById("missionBoxes").style.display = "none";
+}
 
-    /* SHOW ONLY FOR MISSION PAGE */
+/* SHOW ONLY FOR MISSION PAGE */
 
-    if(type === "mission") {
+if(type === "mission") {
 
-        document.getElementById("missionFlow").style.display = "block";
+    document.getElementById("missionFlow").style.display = "block";
 
-    } else {
+} else {
 
-        document.getElementById("missionFlow").style.display = "none";
-    }
+    document.getElementById("missionFlow").style.display = "none";
+}
 
-    /* SHOW ONLY FOR VISSION PAGE */
-    if(type === "vision") {
-        document.getElementById("visionFlow").style.display = "block";
+/* SHOW ONLY FOR VISSION PAGE */
+if(type === "vision") {
+    document.getElementById("visionFlow").style.display = "block";
 
-    } else {
-        document.getElementById("visionFlow").style.display = "none";
-    }
+} else {
+    document.getElementById("visionFlow").style.display = "none";
+}
 
-    /* SHOW ONLY FOR WHY CHOOSE US PAGE */
-    if(type === "why") {
-        document.getElementById("whyChooseSection").style.display = "block";
+/* SHOW ONLY FOR WHY CHOOSE US PAGE */
+if(type === "why") {
+    document.getElementById("whyChooseSection").style.display = "block";
 
-    } else {
-        document.getElementById("whyChooseSection").style.display = "none";
-    }
+} else {
+    document.getElementById("whyChooseSection").style.display = "none";
+}
 
 }
 
-
-/* WHY CHOOSE US ACCORDION */
+   /* WHY CHOOSE US ACCORDION */
 
 const chooseItems = document.querySelectorAll(".choose-item");
 
@@ -437,67 +427,46 @@ scrollAnimation();
 /* OPEN APPOINTMENT PAGE */
 function openAppointmentForm() {
 
-    /* HIDE COMPLETE HOME PAGE */
+    /* HOME PAGE HIDE */
     document.getElementById("mainHomePage").style.display = "none";
 
-    /* COMPLETELY HIDE CONTENT PAGE */
+    /* CONTENT PAGE HIDE */
     document.getElementById("contentPage").classList.remove("active");
-    document.getElementById("contentPage").style.display = "none";
 
-    /* HIDE ALL EXTRA CONTENT SECTION */
-    document.getElementById("overviewProcess").style.display = "none";
-
-    document.getElementById("overviewWhat").style.display = "none";
-
-    document.getElementById("missionBoxes").style.display = "none";
-
-    document.getElementById("missionFlow").style.display = "none";
-
-    document.getElementById("visionSection").style.display = "none";
-
-    document.getElementById("whyChooseSection").style.display = "none";
-
-    /* SHOW APPOINTMENT PAGE */
+    /* APPOINTMENT PAGE SHOW */
     document.getElementById("appointmentPage").classList.add("active");
-    window.scrollTo(0,0);
 
-    
+    window.scrollTo(0,0);
 }
 
 /* CLOSE APPOINTMENT PAGE */
 function closeAppointmentForm() {
-    
+
     /* HIDE APPOINTMENT PAGE */
     document.getElementById("appointmentPage").classList.remove("active");
 
-    /* SHOW MAIN HOME PAGE */
+    /* HOME PAGE SHOW */
     document.getElementById("mainHomePage").style.display = "block";
-
-    /* SHOW HOME HERO SECTION */
-    document.getElementById("home").classList.add("active");
-
-     window.scrollTo(0,0);
-
-}
-
-function openContact() {
-
-    // hide everything
-    document.getElementById("mainHomePage").style.display = "none";
-
-    document.getElementById("contentPage").classList.remove("active");
-
-    document.getElementById("contentPage").style.display = "none";
-
-    document.getElementById("appointmentPage").classList.remove("active");
-
-    // show contact page
-    document.getElementById("contactPage").classList.add("active");
-
-    document.getElementById("navbar").style.display = "flex";
 
     window.scrollTo(0,0);
 }
 
+function openContact() {
 
+    /* HOME HIDE */
+    document.getElementById("mainHomePage").style.display = "none";
 
+    /* CONTENT PAGE HIDE */
+    document.getElementById("contentPage").classList.remove("active");
+
+    /* APPOINTMENT PAGE HIDE */
+    document.getElementById("appointmentPage").classList.remove("active");
+
+    /* CONTACT SHOW */
+    document.getElementById("contactPage").classList.add("active");
+
+    /* NAVBAR */
+    document.getElementById("navbar").style.display = "flex";
+
+    window.scrollTo(0,0);
+}
